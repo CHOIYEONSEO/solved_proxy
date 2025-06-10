@@ -15,6 +15,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 				method: "GET",
 				headers: {
 					Accept: "application/json",
+          'x-solvedac-language': 'ko',
 				},
 			}
 		);
