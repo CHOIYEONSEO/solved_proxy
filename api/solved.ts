@@ -1,4 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
+import fetch from 'node-fetch';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
@@ -9,7 +10,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       },
     });
 
-    // solved.ac가 HTML 에러 페이지를 줄 수도 있으므로 안전하게 파싱 시도
     const contentType = response.headers.get('content-type');
     if (!response.ok || !contentType?.includes('application/json')) {
       const text = await response.text();
@@ -18,7 +18,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const data = await response.json();
 
-    res.setHeader('Access-Control-Allow-Origin', '*'); // 또는 특정 도메인 제한
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(data);
 
