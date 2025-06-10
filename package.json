@@ -1,20 +1,20 @@
 {
-  "name": "solved_proxy",
-  "version": "1.0.0",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc"
-  },
-  "engines": {
-    "node": "18.x"
-  },
-  "dependencies": {
-    "node-fetch": "^2.6.9"
-  },
-  "devDependencies": {
-    "@types/node-fetch": "^2.5.12",
-    "@vercel/node": "^3.0.0",
-    "typescript": "^5.8.3"
-  }
+	"name": "solved_proxy",
+	"version": "1.0.0",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"build": "echo 'no build needed'"
+	},
+	"engines": {
+		"node": "18.x"
+	},
+	"dependencies": {
+		"node-fetch": "^2.6.9"
+	},
+	"devDependencies": {
+		"@types/node-fetch": "^2.5.12",
+		"@vercel/node": "^3.0.0",
+		"typescript": "^5.8.3"
+	}
 }
