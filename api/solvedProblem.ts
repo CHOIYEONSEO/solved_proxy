@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
-    const response = await fetch('https://solved.ac/api/v3/problems', {
+    const response = await fetch('https://solved.ac/api/v3/search/problem', {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
